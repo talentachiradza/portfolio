@@ -37,7 +37,7 @@ header .classList.toggle('sticky' , window.scrollY > 100);
 
 // =====remove menu icon navbar=====
 menulcon.classList.remove('bx-x');
-navbar.classList.remove('active')
+navbar.classList.remove('active') 
 };
 
 // contact
@@ -70,3 +70,29 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img img, .ser-container , .port-box, .contact', { origin: 'bottom' });
+
+
+let js='amazing'
+if (js === 'amazing') alert("Hello world my name is Talent Chiradza.")
+
+    document.addEventListener('DOMContentLoaded', function() {
+        emailjs.init("nnXdnprFgR7LO3vH9"); // Replace with your actual EmailJS Public Key
+    
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            const form = event.target;
+    
+            emailjs.sendForm('service_uthocg6', 'template_xbnnoic', form)
+                .then(function(response) {
+                    console.log('Success:', response);
+                    alert('Message sent successfully!');
+                    form.reset(); // Reset the form after successful submission
+                }, function(error) {
+                    console.error('Error:', error);
+                    alert('Failed to send the message. Please try again.');
+                    console.log('Error details:', error.text); // Log additional error details
+                });
+        });
+    });
+    
