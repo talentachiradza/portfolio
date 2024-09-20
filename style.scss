@@ -247,7 +247,7 @@ section{
 }
 
 .port{
-    padding-bottom: 10rem; margin-top: -100px;
+    padding-bottom: 10rem; margin-top: 10px;
     span{color: var(--main-color);}
     .heading{font-size: 4.5rem; text-align: center;}
     h2{margin-bottom: 2rem;}
@@ -400,6 +400,8 @@ footer{
      .section{padding: 10rem 3% 2rem;}
      .home .pro-container .pro-box{right: -22rem;}
      .home .pro-container .overlay{right: -15rem;}
+     .about-content .heading{font-size: 4.5rem; text-align: center !important; margin-bottom: 10px; line-height: 1.4;}
+    .about-content h3{font-size: 2rem; text-align: center !important;}
 }
 
 @media (max-width: 991px) {
@@ -413,6 +415,8 @@ footer{
       .home-img img{display: none;}
       .services,
       .port{padding-bottom: 7rem;}
+      .about-content .heading{font-size: 4.5rem; text-align: center !important; margin-bottom: 10px; line-height: 1.4;}
+    .about-content h3{font-size: 2rem; text-align: center !important;}
 
 }
 @media (max-width: 767px) {
@@ -439,7 +443,7 @@ footer{
         display: none;
        }
 
-        .home{padding: 0 3% 23rem; justify-content: center; text-align: center; margin-top: 15px;}
+        .home{padding: 0 3% 23rem; justify-content: center; text-align: center; }
         .home-content h3{font-size: 2.6rem;}
         .home-content h1{font-size: 5rem;}
         .home-content .social-media a{margin: 2.5rem .75rem 3rem;}
@@ -454,7 +458,8 @@ footer{
         .home .pro-box .circle{position: fixed; width: 670px; height: 670px; z-index: -1;}
         .home .pro-container .overlay{position: fixed; top: 70rem; left: 50%; right: 0; transform: rotate(90deg) translate(-50%, 50%) scaleY(3); border-width: 23.9rem;}
         .about {flex-direction: column-reverse; text-align: center;}
-        .about-content h2{ text-align: center;}
+        .about-content .heading{font-size: 4.5rem; text-align: center !important; margin-bottom: 10px; line-height: 1.4;}
+        .about-content h3{font-size: 2rem; text-align: center !important;}
         .about-img img{width: 70vw; margin-top: -2rem;}
         .services h2,
         .port h2 {margin-bottom: 3rem;}
@@ -464,6 +469,8 @@ footer{
 
 @media (max-width: 617px) {
     .port .port-container{grid-template-columns: 1fr;}
+    .about-content .heading{font-size: 4.5rem; text-align: center !important; margin-bottom: 10px; line-height: 1.4;}
+    .about-content h3{font-size: 2rem; text-align: center !important;}
 }
 
 @media (max-width: 450px) {
@@ -474,13 +481,19 @@ footer{
     .home .pro-box .pro:nth-child(2){transform: rotate(0deg) translate(5px, -335px);}
     .home .pro-box .pro:nth-child(3){transform: rotate(90deg) translate(-105px, -440px);}
     .home .pro-box .pro:nth-child(4){transform: rotate(180deg) translate(-210px, -335px);}
+    .about-content .heading{font-size: 4.5rem; text-align: center !important; margin-bottom: 10px; line-height: 1.4;}
+    .about-content h3{font-size: 2rem; text-align: center !important;}
 }
 
 @media (max-width: 430px) {
      .about-img img{width: 90vw;}
+     .about-content .heading{font-size: 4.5rem; text-align: center !important; margin-bottom: 10px; line-height: 1.4;}
+     .about-content h3{font-size: 2rem; text-align: center !important;}
 }
 
 
 @media (max-width: 365px) {
       .about-img img{width: 90vw;}
+      .about-content .heading{font-size: 4.5rem; text-align: center !important; margin-bottom: 10px; line-height: 1.4;}
+      .about-content h3{font-size: 2rem; text-align: center !important;}
 }
