@@ -82,16 +82,46 @@ if (js === 'amazing') alert("Hello world my name is Talent Chiradza.")
             event.preventDefault(); // Prevent the default form submission
     
             const form = event.target;
+            const formStatus = document.getElementById('formStatus');
     
+            // Show "sending" message to the user
+            formStatus.style.display = 'block';
+            formStatus.textContent = 'Sending your message...';
+    
+            // Extract form field values
+            const userName = form.querySelector('input[name="from_name"]').value;
+            const userEmail = form.querySelector('input[name="reply_to"]').value;
+            const userPhone = form.querySelector('input[name="phone"]').value;
+            const userMessage = form.querySelector('textarea[name="message"]').value;
+    
+            // Create the formatted message content (this is optional and for your own logging)
+            const formattedMessage = `
+                You got a new message from:
+                Name: ${userName}
+                Email: ${userEmail}
+                Phone: ${userPhone}
+                Message: ${userMessage}
+            `;
+    
+            // Log the formatted message for debugging (you can remove this if not needed)
+            console.log(formattedMessage);
+    
+            // Send the form via EmailJS
             emailjs.sendForm('service_crkppii', 'template_qcudnuo', form)
                 .then(function(response) {
                     console.log('Success:', response);
-                    alert('Message sent successfully!');
+                    
+                    // Success message with sender's name and email
+                    formStatus.textContent = `Message sent successfully! We will contact you soon at ${userEmail}, ${userName}, ${userPhone}.`;
+                    formStatus.style.color = 'white'; // Change color to green for success
+                    
                     form.reset(); // Reset the form after successful submission
                 }, function(error) {
                     console.error('Error:', error);
-                    alert('Failed to send the message. Please try again.');
-                    console.log('Error details:', error.text); // Log additional error details
+                    
+                    // Error message to the user
+                    formStatus.textContent = 'Failed to send the message. Please try again.';
+                    formStatus.style.color = 'red'; // Change color to red for error
                 });
         });
     });
