@@ -113,7 +113,13 @@ if (js === 'amazing') alert("Hello world my name is Talent Chiradza.")
                     
                     // Success message with sender's name and email
                     formStatus.textContent = `Message sent successfully! We will contact you soon at ${userEmail}, ${userName}, ${userPhone}.`;
-                    formStatus.style.color = 'white'; // Change color to green for success
+                    formStatus.style.color = 'white'; // Change color to white for success
+                    
+                    // Set a timeout to clear or hide the message after 3 seconds
+                    setTimeout(() => {
+                        formStatus.textContent = '';  // Clear the success message
+                        formStatus.style.color = '';  // Reset color
+                    }, 4000);  // 3000 milliseconds = 4 seconds
                     
                     form.reset(); // Reset the form after successful submission
                 }, function(error) {

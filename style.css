@@ -861,10 +861,7 @@ span {
   .contain .text,
   .contain .information,
   .contain .social-media p {
-    font-size: 0.8rem;
-  }
-  .contain .title {
-    font-size: 1.15rem;
+    font-size: 1.8rem;
   }
   .contain .social-icon a {
     width: 30px;
