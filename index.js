@@ -76,14 +76,14 @@ let js='amazing'
 if (js === 'amazing') alert("Hello world my name is Talent Chiradza.")
 
     document.addEventListener('DOMContentLoaded', function() {
-        emailjs.init("nnXdnprFgR7LO3vH9"); // Replace with your actual EmailJS Public Key
+        emailjs.init("NijvwUmFY0xxb_uM9"); // Correct EmailJS Public Key
     
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
     
             const form = event.target;
     
-            emailjs.sendForm('service_uthocg6', 'template_xbnnoic', form)
+            emailjs.sendForm('service_crkppii', 'template_qcudnuo', form)
                 .then(function(response) {
                     console.log('Success:', response);
                     alert('Message sent successfully!');
