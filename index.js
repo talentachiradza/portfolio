@@ -72,8 +72,8 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img img, .ser-container , .port-box, .contact', { origin: 'bottom' });
 
 
-let js='amazing'
-if (js === 'amazing') alert("Hello world my name is Talent Chiradza.")
+// let js='amazing'
+// if (js === 'amazing') alert("Hello world my name is Talent Chiradza.")
 
     document.addEventListener('DOMContentLoaded', function() {
         emailjs.init("NijvwUmFY0xxb_uM9"); // Correct EmailJS Public Key
